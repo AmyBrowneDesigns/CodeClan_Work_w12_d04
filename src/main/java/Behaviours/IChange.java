@@ -1,4 +1,4 @@
-package Characters;
+package Behaviours;
 
 public interface IChange {
 }
