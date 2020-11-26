@@ -1,8 +1,6 @@
-import Characters.Healer.HealerType;
-import Characters.Healer.HealingTool;
 import Characters.Magical.Magical;
 import Characters.Magical.MagicalType;
-import Characters.Magical.Spell;
+import Characters.Magical.Equipped;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,7 +12,7 @@ public class MagicalTest {
 
     @Before
     public void before(){
-        testMagical = new Magical ("Gandalf", 30, 20, 60, 100, MagicalType.WIZARD, Spell.FIREBALL);
+        testMagical = new Magical ("Gandalf", 30, 20, 60, 100, MagicalType.WIZARD, Equipped.FIREBALL);
     }
 
     @Test
@@ -24,6 +22,6 @@ public class MagicalTest {
 
     @Test
     public void hasMagicalSpell(){
-        assertEquals(Spell.FIREBALL, testMagical.getSpell());
+        assertEquals(Equipped.FIREBALL, testMagical.getSpell());
     }
 }

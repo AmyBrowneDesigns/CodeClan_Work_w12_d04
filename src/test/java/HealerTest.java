@@ -1,6 +1,6 @@
 import Characters.Healer.Healer;
 import Characters.Healer.HealerType;
-import Characters.Healer.HealingTool;
+import Characters.Healer.Equipped;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class HealerTest {
 
     @Before
     public void before(){
-        testHealer = new Healer("TRIPLE HHH",20, 60, 40, 300, HealerType.CLERIC, HealingTool.POTION);
+        testHealer = new Healer("TRIPLE HHH",20, 60, 40, 300, HealerType.CLERIC, Equipped.POTION);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class HealerTest {
 
     @Test
     public void hasHealerTool(){
-        assertEquals(HealingTool.POTION, testHealer.getHealingTool());
+        assertEquals(Equipped.POTION, testHealer.getHealingTool());
     }
 }
 

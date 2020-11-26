@@ -1,6 +1,6 @@
 package Characters.Fighter;
 
-public enum Weapons {
+public enum Equipped {
 
     SWORD(10),
     AXE(8),
@@ -9,7 +9,7 @@ public enum Weapons {
 
     private final int damage;
 
-    Weapons(int damage) {
+    Equipped(int damage) {
         this.damage = damage;
     }
 

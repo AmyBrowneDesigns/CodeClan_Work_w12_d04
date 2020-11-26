@@ -1,25 +1,23 @@
 package Characters.Magical;
 
 import Characters.CharacterBase;
-import Characters.Healer.HealerType;
-import Characters.Healer.HealingTool;
 
 public class Magical extends CharacterBase{
 
     private MagicalType magicalType;
-    private Spell spell;
+    private Equipped equipped;
 
 
-    public Magical(String name, int health, int armour, int agility, int strength, MagicalType magicalType, Spell spell){
+    public Magical(String name, int health, int armour, int agility, int strength, MagicalType magicalType, Equipped equipped){
         super(name, health, armour, agility, strength);
         this.magicalType = magicalType;
-        this.spell = spell;
+        this.equipped = equipped;
     }
 
     public MagicalType getMagicalType(){
         return this.magicalType;
     }
-    public Spell getSpell(){
-        return this.spell;
+    public Equipped getSpell(){
+        return this.equipped;
     }
 }

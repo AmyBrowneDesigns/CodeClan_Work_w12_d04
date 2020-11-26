@@ -1,6 +1,6 @@
 package Characters.Magical;
 
-public enum Spell {
+public enum Equipped {
 
     FIREBALL,
     LIGHTNINGBOLT,

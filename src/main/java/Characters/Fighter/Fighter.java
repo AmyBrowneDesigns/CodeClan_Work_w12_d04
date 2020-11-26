@@ -5,21 +5,21 @@ import Characters.CharacterBase;
 public class Fighter extends CharacterBase {
 
     private FighterType fighterType;
-    private Weapons weapon;
+    private Equipped equipped;
 
 
-    public Fighter(String name, int health, int armour, int agility, int strength, FighterType fighterType, Weapons weapon) {
+    public Fighter(String name, int health, int armour, int agility, int strength, FighterType fighterType, Equipped equipped) {
         super(name, health, armour, agility, strength);
         this.fighterType = fighterType;
-        this.weapon = weapon;
+        this.equipped = equipped;
     }
 
     public FighterType getType(){
         return this.fighterType;
     }
 
-    public Weapons getWeapon(){
-        return this.weapon;
+    public Equipped getWeapon(){
+        return this.equipped;
     }
 }
 

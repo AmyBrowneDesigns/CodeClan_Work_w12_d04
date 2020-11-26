@@ -1,6 +1,6 @@
 package Characters.Healer;
 
-public enum HealingTool {
+public enum Equipped {
 
     POTION,
     HERBS,
