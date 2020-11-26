@@ -1,6 +1,6 @@
 import Characters.Fighter.Fighter;
 import Characters.Fighter.FighterType;
-import Characters.Fighter.Equipped;
+import Characters.Fighter.Weapon;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class FighterTest {
 
     @Before
     public void before(){
-        testFighter = new Fighter("Kane", 100, 50, 40, 60, FighterType.DWARF, Equipped.AXE);
+        testFighter = new Fighter("Kane", 100, 50, 40, 60, FighterType.DWARF, Weapon.AXE);
     }
 
     @Test
@@ -22,7 +22,13 @@ public class FighterTest {
 
     @Test
     public void fighterHasAWeapon(){
-        assertEquals(Equipped.AXE, testFighter.getWeapon());
+        assertEquals(Weapon.AXE, testFighter.getWeapon());
+    }
+
+    @Test
+    public void fighterCanChangeWeapon() {
+        testFighter.changeWeapon(Weapon.CLUB);
+        assertEquals(Weapon.CLUB, testFighter.getWeapon());
     }
 
 }
