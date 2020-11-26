@@ -1,5 +1,5 @@
 public class Character {
 
-    // character superclas goes here
+    // character superclass goes here
 
 }
