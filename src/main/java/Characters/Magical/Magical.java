@@ -1,9 +1,10 @@
 package Characters.Magical;
 
+import Behaviours.IGetTreasure;
 import Characters.CharacterBase;
-import Characters.Healer.HealingTool;
+import Loot.LootContainer;
 
-public class Magical extends CharacterBase{
+public class Magical extends CharacterBase implements IGetTreasure {
 
     private MagicalType magicalType;
     private Spell spell;
@@ -37,4 +38,10 @@ public class Magical extends CharacterBase{
         this.familiar = newFamiliar;
     }
 
+    public int getTreasure(LootContainer lootContainer) {
+        int lootWorth = lootContainer.getTheValue() * lootContainer.getSize();
+        lootContainer.emptyContainer();
+        addLootToBag(lootWorth);
+        return lootWorth;
+    }
 }

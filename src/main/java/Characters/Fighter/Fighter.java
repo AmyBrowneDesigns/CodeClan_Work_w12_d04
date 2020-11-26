@@ -1,6 +1,7 @@
 package Characters.Fighter;
 
 import Characters.CharacterBase;
+import Loot.LootContainer;
 
 public class Fighter extends CharacterBase {
 
@@ -25,5 +26,13 @@ public class Fighter extends CharacterBase {
     public void changeWeapon(Weapon newWeapon){
         this.weapon = newWeapon;
     }
+
+    public int getTreasure(LootContainer lootContainer) {
+        int lootWorth = lootContainer.getTheValue() * lootContainer.getSize();
+        lootContainer.emptyContainer();
+        addLootToBag(lootWorth);
+        return lootWorth;
+    }
 }
+
 

@@ -1,6 +1,7 @@
 import Characters.Fighter.Fighter;
 import Characters.Fighter.FighterType;
 import Characters.Fighter.Weapon;
+import Loot.LootContainer;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,6 +30,13 @@ public class FighterTest {
     public void fighterCanChangeWeapon() {
         testFighter.changeWeapon(Weapon.CLUB);
         assertEquals(Weapon.CLUB, testFighter.getWeapon());
+    }
+
+    @Test
+    public void fighterCanGetLoot() {
+        LootContainer testLootContainer = new LootContainer("Gold", 10, 10);
+        assertEquals(100, testFighter.getTreasure(testLootContainer));
+        assertEquals(0, testLootContainer.getTheValue());
     }
 
 }

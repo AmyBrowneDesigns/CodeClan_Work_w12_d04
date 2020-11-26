@@ -1,6 +1,7 @@
 import Characters.Healer.Healer;
 import Characters.Healer.HealerType;
 import Characters.Healer.HealingTool;
+import Loot.LootContainer;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,6 +30,12 @@ public class HealerTest {
     public void healerCanChangeTool() {
         testHealer.changeHealingTool(HealingTool.HERBS);
         assertEquals(HealingTool.HERBS, testHealer.getHealingTool());
+    }
+    @Test
+    public void healerCanGetLoot() {
+        LootContainer testLootContainer = new LootContainer("Gold", 10, 10);
+        assertEquals(100, testHealer.getTreasure(testLootContainer));
+        assertEquals(0, testLootContainer.getTheValue());
     }
 }
 

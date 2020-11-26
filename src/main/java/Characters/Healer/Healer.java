@@ -1,9 +1,10 @@
 package Characters.Healer;
 
+import Behaviours.IGetTreasure;
 import Characters.CharacterBase;
-import Characters.Fighter.Weapon;
+import Loot.LootContainer;
 
-public class Healer extends CharacterBase {
+public class Healer extends CharacterBase implements IGetTreasure {
 
     private HealerType healerType;
     private HealingTool healingTool;
@@ -26,4 +27,12 @@ public class Healer extends CharacterBase {
     public void changeHealingTool(HealingTool newHealingTool){
         this.healingTool = newHealingTool;
     }
+
+    public int getTreasure(LootContainer lootContainer) {
+        int lootWorth = lootContainer.getTheValue() * lootContainer.getSize();
+        lootContainer.emptyContainer();
+        addLootToBag(lootWorth);
+        return lootWorth;
+    }
+
 }

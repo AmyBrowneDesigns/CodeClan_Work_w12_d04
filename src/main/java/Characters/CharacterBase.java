@@ -1,5 +1,10 @@
 package Characters;
 
+import Behaviours.IGetTreasure;
+import Loot.LootContainer;
+
+import java.util.ArrayList;
+
 abstract public class CharacterBase {
 
     private String name;
@@ -7,6 +12,7 @@ abstract public class CharacterBase {
     private int armour;
     private int agility;
     private int strength;
+    private ArrayList<Integer> lootBag;
 
     public CharacterBase(String name, int health, int armour, int agility, int strength){
         this.name = name;
@@ -14,6 +20,7 @@ abstract public class CharacterBase {
         this.armour = armour;
         this.agility = agility;
         this.strength = strength;
+        lootBag = new ArrayList<>();
     }
 
     public String getName(){
@@ -56,4 +63,7 @@ abstract public class CharacterBase {
         this.strength = newStrength;
     }
 
+    public void addLootToBag(int lootValue){
+        this.lootBag.add(lootValue);
+    }
 }
