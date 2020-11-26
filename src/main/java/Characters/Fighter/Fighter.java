@@ -17,5 +17,9 @@ public class Fighter extends CharacterBase {
     public FighterType getType(){
         return this.fighterType;
     }
+
+    public Weapons getWeapon(){
+        return this.weapon;
+    }
 }
 

@@ -20,4 +20,9 @@ public class FighterTest {
         assertEquals(FighterType.DWARF, testFighter.getType());
     }
 
+    @Test
+    public void fighterHasAWeapon(){
+        assertEquals(Weapons.AXE, testFighter.getWeapon());
+    }
+
 }
