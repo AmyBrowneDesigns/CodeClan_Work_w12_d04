@@ -1,6 +1,6 @@
 package Characters.Healer;
 
-public enum Types {
+public enum HealerTypes {
 
     CLERIC,
     PALADIN,

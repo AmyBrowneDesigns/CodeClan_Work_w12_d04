@@ -1,6 +1,6 @@
 package Characters;
 
-abstract public class Character {
+abstract public class CharacterBase {
 
     private String name;
     private int health;
@@ -8,7 +8,7 @@ abstract public class Character {
     private int agility;
     private int strength;
 
-    public Character(String name, int health, int armour, int agility, int strength){
+    public CharacterBase(String name, int health, int armour, int agility, int strength){
         this.name = name;
         this.health = health;
         this.armour = armour;

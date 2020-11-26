@@ -1,6 +1,6 @@
 package Characters.Fighter;
 
-public enum Types {
+public enum FighterType {
 
     KNIGHT,
     DWARF,
