@@ -1,6 +1,6 @@
 package Characters.Magical;
 
-public enum MagicalTypes {
+public enum MagicalType {
 
     WIZARD,
     WARLOCK,
