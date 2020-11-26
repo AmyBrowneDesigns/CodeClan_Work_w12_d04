@@ -2,6 +2,7 @@ package Characters.Healer;
 
 import Behaviours.IGetTreasure;
 import Characters.CharacterBase;
+import Characters.Enemies.Enemy;
 import Loot.LootContainer;
 
 public class Healer extends CharacterBase implements IGetTreasure {
@@ -35,4 +36,8 @@ public class Healer extends CharacterBase implements IGetTreasure {
         return lootWorth;
     }
 
+    @Override
+    public void attack(Enemy enemy) {
+
+    }
 }

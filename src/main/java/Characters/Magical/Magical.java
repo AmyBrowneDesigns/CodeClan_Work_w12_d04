@@ -2,6 +2,7 @@ package Characters.Magical;
 
 import Behaviours.IGetTreasure;
 import Characters.CharacterBase;
+import Characters.Enemies.Enemy;
 import Loot.LootContainer;
 
 public class Magical extends CharacterBase implements IGetTreasure {
@@ -43,5 +44,20 @@ public class Magical extends CharacterBase implements IGetTreasure {
         lootContainer.emptyContainer();
         addLootToBag(lootWorth);
         return lootWorth;
+    }
+
+    @Override
+    public void attack(Enemy enemy) {
+        int damageDone = spell.getDamage() * getAgility();
+        int enemyArmour = enemy.getArmour();
+        int excessDamage = damageDone - enemyArmour;
+
+        int enemyHealth = enemy.getHealth();
+        int finalDamage = excessDamage - enemyHealth;
+
+        if (finalDamage >= 0) {
+            enemy.setHealth(0);
+        }
+
     }
 }

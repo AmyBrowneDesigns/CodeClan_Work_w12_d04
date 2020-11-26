@@ -1,6 +1,7 @@
 package Characters;
 
 import Behaviours.IGetTreasure;
+import Characters.Enemies.Enemy;
 import Loot.LootContainer;
 
 import java.util.ArrayList;
@@ -66,4 +67,6 @@ abstract public class CharacterBase {
     public void addLootToBag(int lootValue){
         this.lootBag.add(lootValue);
     }
+
+    public abstract void attack(Enemy enemy);
 }

@@ -30,4 +30,9 @@ public class Enemy extends CharacterBase {
     public EnemyType getType(){
         return this.enemyType;
     }
+
+    @Override
+    public void attack(Enemy enemy) {
+
+    }
 }

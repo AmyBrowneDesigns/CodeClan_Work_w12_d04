@@ -11,6 +11,8 @@ import Rooms.Size;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class GameTest {
 
     Game testGame;
@@ -21,15 +23,16 @@ public class GameTest {
 
     @Before
     public void before(){
-        wizard = new Magical("Gandalf", 30, 40, 20, 50, MagicalType.WIZARD, Spell.CRUCIO, Familiar.PSYCHOSQUIRREL);
-        orc = new Enemy("jericho", 20, 10, 30, 20, 80, EnemyType.ORC,);
+        wizard = new Magical("Gandalf", 30, 30, 30, 30, MagicalType.WIZARD, Spell.CRUCIO, Familiar.PSYCHOSQUIRREL);
+        orc = new Enemy("jericho", 10, 10, 10, 10, 80, EnemyType.ORC);
         treasureChest = new LootContainer("Rubies", 200, 10);
         room = new Room(Size.SMALL, Type.CAVE, orc,treasureChest);
     }
 
     @Test
     public void wizardCanAttackOrc(){
-        wizard.attack()
+        wizard.attack(orc);
+        assertEquals(0, orc.getHealth());
     }
 
 

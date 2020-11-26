@@ -1,6 +1,7 @@
 package Characters.Fighter;
 
 import Characters.CharacterBase;
+import Characters.Enemies.Enemy;
 import Loot.LootContainer;
 
 public class Fighter extends CharacterBase {
@@ -32,6 +33,11 @@ public class Fighter extends CharacterBase {
         lootContainer.emptyContainer();
         addLootToBag(lootWorth);
         return lootWorth;
+    }
+
+    @Override
+    public void attack(Enemy enemy) {
+
     }
 }
 
